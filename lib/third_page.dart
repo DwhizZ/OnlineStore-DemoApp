@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_mart_project/color_selection.dart';
+import 'package:mini_mart_project/fourth_page.dart';
 import 'package:mini_mart_project/size_selection.dart';
 
 class ThirdPage extends StatelessWidget {
@@ -169,30 +170,41 @@ class ThirdPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 70),
-            Container(
-              height: 55,
-              width: 370,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(12),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const FourthPage();
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                height: 55,
+                width: 370,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                  color: Colors.orange,
                 ),
-                color: Colors.orange,
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.shopping_cart_outlined,
-                      color: Colors.white, size: 30),
-                  SizedBox(width: 30),
-                  Text(
-                    'Add to Cart',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  )
-                ],
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.shopping_cart_outlined,
+                        color: Colors.white, size: 30),
+                    SizedBox(width: 30),
+                    Text(
+                      'Add to Cart',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    )
+                  ],
+                ),
               ),
             )
           ],

@@ -55,22 +55,22 @@ class _MainPageStateState extends State<_MainPageState> {
                     children: [
                       const Text(
                         'Suleiman Zaheed',
-                        style:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 28),
                       ),
                       IconButton(
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return const SecondPage();
-                                },
-                              ),
-                            );
-                          },
-                          icon:
-                              const Icon(Icons.shopping_cart_outlined, size: 28)),
-                      // IconButton( onPressed: Icons.shopping_cart_outlined, size: 28),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const SecondPage();
+                              },
+                            ),
+                          );
+                        },
+                        icon:
+                            const Icon(Icons.shopping_cart_outlined, size: 28),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 30),
@@ -194,10 +194,13 @@ class _MainPageStateState extends State<_MainPageState> {
                     children: [
                       IconsDisplay(
                           icons: Icons.music_video_rounded, text: '  Music'),
-                      IconsDisplay(icons: Icons.villa_outlined, text: 'Property'),
-                      IconsDisplay(icons: Icons.games_outlined, text: '   Game'),
                       IconsDisplay(
-                          icons: Icons.phone_android_outlined, text: '  Gadget'),
+                          icons: Icons.villa_outlined, text: 'Property'),
+                      IconsDisplay(
+                          icons: Icons.games_outlined, text: '   Game'),
+                      IconsDisplay(
+                          icons: Icons.phone_android_outlined,
+                          text: '  Gadget'),
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -205,7 +208,8 @@ class _MainPageStateState extends State<_MainPageState> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      IconsDisplay(icons: Icons.tv_outlined, text: 'Electronics'),
+                      IconsDisplay(
+                          icons: Icons.tv_outlined, text: 'Electronics'),
                       IconsDisplay(
                           icons: Icons.chair_alt_outlined, text: 'Furnitures'),
                       IconsDisplay(
@@ -220,8 +224,8 @@ class _MainPageStateState extends State<_MainPageState> {
                     children: [
                       const Text(
                         'Best Seller',
-                        style:
-                            TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       InkWell(
                         onTap: () {
